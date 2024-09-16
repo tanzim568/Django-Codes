@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>THis is Home page</h1>
+    <h3>{{author}}</h3>
+    <h3>{{Age}}</h3>
+    <h3>{{Designation}}</h3>
+    <!-- <h3>{{lst}}</h3> --> 
+     <!-- template gulai hocche mainly frontend ! -->
+
+    <!-- conditional statement   -->
+    {% comment %} 
+    This is a comment. It will not be rendered in the HTML output.
+    Space is factor  .. please check space after keywords
+    {% endcomment %}
+     
+     {% if Age >= 20 %}
+        <h1>You will get your license soon</h1>
+     {% elif Age >= 10 and Age <= 19 %}     
+        <h2>You'r license will be arrived on time </h2>
+     {% else %}
+        <h5>You'r a child</h5>    
+     {% endif %}
+
+  <!-- for loop -->
+      {% for i in courses %}
+      <h3>{{i.id}}   {{i.name}} {{i.fee}}</h3>
+      {% endfor %}
+
+      <!-- template filtering -->
+      <h3>{{ lst | join:"  //  " }} </h3>
+
+      <h4>{{ birthday | date:"D d M Y" }}</h4>
+      <h4>{{ val|add:5 }}</h4>
+      <h4>{{  'christmas' | capfirst }}</h4>\
+
+      <!-- so many filter .. earthly.com e search list e available filters -->
+     
+
+     </body>
+</html>  
