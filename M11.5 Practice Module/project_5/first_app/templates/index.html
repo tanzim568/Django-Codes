@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+
+
+{%block content%}
+<div class="box d-flex gap-2 flex-wrap container my-5">
+    {%for i in data%}
+
+
+  
+<div class="card" style="width: 18rem;">
+    <img src="{{i.strMealThumb}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{i.strMeal}}</h5>
+      <p class="card-text">{{i.idMeal}}</p>
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+  </div>
+
+
+{%endfor%}
+</div>
+{%endblock%}

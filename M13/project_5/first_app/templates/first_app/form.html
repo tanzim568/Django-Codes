@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+
+{%block content%}
+
+<div class="rating h-75 mx-auto p-5 container"> 
+  <form method="post"  action="/about/">   
+    {% csrf_token %}
+        <div class="mb-3">
+      <label for="exampleInputname" class="form-label">Name </label>
+      <input type="text" name="username"   class="form-control" id="exampleInputname aria-describedby="emailHelp">
+      
+    </div>
+
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" name="useremail"   class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      
+      <select class="form-select my-3" name="select" aria-label="Default select example">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+      </select>
+
+      <button type="submit" class="btn btn-primary my-5">Submit</button>
+    </div>
+  
+   
+  </form>
+
+
+</div>
+  
+{%endblock%}
+
+
+
+
+
