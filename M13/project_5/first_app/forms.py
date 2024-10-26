@@ -71,6 +71,7 @@ class PasswordValidationProject(forms.Form):
     # password=forms.CharField(widget=forms.PasswordInput)
     # confirm_password=forms.CharField(widget=forms.PasswordInput)
     
+    
     def clean(self):
         cleaned_data=super().clean()
         valpass= self.cleaned_data['password']
